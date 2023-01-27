@@ -1,0 +1,84 @@
+.faq {
+  color: #333333;
+  font-size: 24px;
+  margin-bottom: 370px;
+  .container {
+    max-width: 1570px;
+    @media(max-width: 1600px) {
+      max-width: 1350px;
+    }
+  }
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .faq__text {
+    text-align: center;
+    color: #333;
+    margin-bottom: 65px;
+  }
+
+  .faq-block {
+    display: flex;
+
+  }
+  .faq-list {
+    width: 43%;
+    margin-right: 74px;
+  }
+
+  .faq-answer-wrapper {
+    padding-top: 18px;
+    width: 53%;
+    line-height: 1.5;
+    color: #333;
+    position: relative;
+    padding-left: 30px;
+    &:before {
+      content: '';
+      width: 4px;
+      height: 440px;
+      background-color: #e3000f;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .faq-question {
+    border-bottom: #e1e1e1 solid 1px;
+    padding-bottom: 7px;
+    line-height: 1.5;
+    padding: 18px 0px 11px 101px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 32px;
+      background-image: url("../img/blue-mark.png");
+      height: 17px;
+      width: 26px;
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .faq-question--open {
+    &:before {
+      background-image: url("../img/red-mark.png");
+      transform: rotate(270deg);
+    }
+  }
+
+  .target-faq-answer {
+    p {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+  }
+}

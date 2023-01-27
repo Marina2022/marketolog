@@ -1,0 +1,29 @@
+.in-numbers {
+  margin-bottom: 218px;
+  .container {
+    max-width: 1164px;
+  }
+
+  .in-numbers__text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 3;
+    color: #333;
+  }
+
+  h2 {
+    margin-bottom: 72px;
+  }
+
+  .numbers-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .one-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

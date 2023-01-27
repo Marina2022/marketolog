@@ -1,0 +1,108 @@
+.first-screen {
+  padding-top: 72px;
+  background: url("../img/first-screen-bg.png") center top no-repeat;
+  height: 987px;
+
+  h1 {
+    letter-spacing: 1.2px;
+  }
+
+  @media (max-width: 1600px) {
+    background-size: cover;
+  }
+
+  .container {
+    position: relative;
+    max-width: 1521px;
+    @media(max-width: 1600px) {
+      max-width: 1350px;
+    }
+
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 43px;
+  }
+
+
+  .right-header-part {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__facebook-icon {
+    margin-right: 23px;
+  }
+
+  .header__follow-us {
+    margin-right: 29px;
+  }
+
+  .header__FAQ {
+    margin-left: 42px;
+    margin-right: 54px;
+  }
+
+  .header__logo {
+    padding-top: 6px;
+  }
+
+  .header__connect-us {
+    font-family: inherit;
+    color: inherit;
+    background-color: inherit;
+    padding: 17px 31px 16px 31px;
+    border: solid 2px #fff;
+    margin-right: 39px;
+
+  }
+
+  .main-promo {
+    position: relative;
+    max-width: 492px;
+    margin-top: 232px;
+    margin-left: 71px;
+    font-size: 38px;
+    font-weight: bold;
+    line-height: 1.3;
+
+    .look-video {
+      margin-top: 44px;
+    }
+
+
+    &:before {
+      content: '';
+      width: 4px;
+      height: 140px;
+      background-color: $red-text;
+      position: absolute;
+      left: -29px;
+      top: 5px;
+    }
+  }
+
+  .call-button {
+    position: absolute;
+    right: -8px;
+    bottom: -451px;
+    background-image: url("../img/btn-call.png");
+    width: 112px;
+    height: 112px;
+    background-repeat: no-repeat ;
+
+    @media(max-width: 1600px) {
+      right: 0px;
+    }
+  }
+
+  .select-btn {
+    height: 7px;
+    width: 12px;
+    margin-left: 9px;
+    background-image: url("../img/expand-button.png");
+  }
+}

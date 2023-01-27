@@ -1,0 +1,82 @@
+
+.problems {
+  margin-top: 186px;
+  font-size: 24px;
+  color: #333333;
+  position: relative;
+  &:before {
+    z-index: -10;
+    content: '';
+    top: -137px;
+    right: 149px;
+    background-image: url("../img/problems.png");
+    width: 326px;
+    height: 298px;
+    position: absolute;
+  }
+
+  .container {
+    max-width: 1590px;
+    @media (max-width: 1600px){
+      max-width: 1320px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 19px;
+  }
+
+  .problems__text {
+    text-align: center;
+    color: #333;
+    margin-bottom: 60px;
+  }
+
+  .problems-list__item {
+    border-bottom: #e1e1e1 solid 1px;
+    padding-bottom: 7px;
+    &:last-child {
+      border: none;
+    }
+  }
+
+
+  .problem-item__problem-desc--open {
+    &:before {
+      transform: rotate(270deg);
+    }
+  }
+
+  .problem-item__problem-desc {
+    line-height: 1.5;
+    padding: 18px 0px 11px 101px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: 32px;
+      background-image: url("../img/red-mark.png");
+      height: 17px;
+      width: 26px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .problem-item__problem-solution {
+    padding: 22px 0 22px 186px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 19px;
+      left: 143px;
+      background-image: url("../img/check-mark.png");
+      height: 30px;
+      width: 30px;
+      background-repeat: no-repeat;
+    }
+  }
+}

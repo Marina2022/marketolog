@@ -1,0 +1,30 @@
+.partners {
+  .container {
+    text-align: center;
+    max-width: 1560px;
+    @media (max-width: 1600px){
+      max-width: 1440px;
+    }
+  }
+h2 {
+  margin-bottom: 103px;
+}
+  .partners-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -70px;
+    margin-bottom: 200px;
+    @media(max-width: 1600px) {
+      margin-right: 0;
+      margin-bottom: 150px;
+    }
+    img {
+      margin-right: 70px;
+      margin-bottom: 55px;
+      @media(max-width: 1600px){
+        margin-right: 20px;
+      }
+    }
+  }
+}
