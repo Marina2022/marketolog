@@ -67,18 +67,18 @@ modalCloseBtn.addEventListener('click',()=>{
 
 
 // video
-const video1 = document.querySelector('.look-video-1');
-const video2 = document.querySelector('.look-video-2');
-const video3 = document.querySelector('.look-video-3');
-const videoContainer = document.querySelector('.video-container');
-const video = document.querySelector('.video-container video');
-const videoCloseBtn = document.querySelector('.video-close-btn');
-
-video1.addEventListener('click',()=>{
-  videoContainer.classList.remove('fully-hidden');
-  video.setAttribute('src', "/videos/video-1.mp4");
-  overlay.classList.remove('fully-hidden');
-})
+// const video1 = document.querySelector('.look-video-1');
+// const video2 = document.querySelector('.look-video-2');
+// const video3 = document.querySelector('.look-video-3');
+// const videoContainer = document.querySelector('.video-container');
+// const video = document.querySelector('.video-container video');
+// const videoCloseBtn = document.querySelector('.video-close-btn');
+//
+// video1.addEventListener('click',()=>{
+//   videoContainer.classList.remove('fully-hidden');
+//   video.setAttribute('src', "/videos/video-1.mp4");
+//   overlay.classList.remove('fully-hidden');
+// })
 
 video2.addEventListener('click',()=>{
   videoContainer.classList.remove('fully-hidden');
