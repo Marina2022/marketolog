@@ -16,14 +16,14 @@ import rename from "gulp-rename";
 import del from "gulp-clean";
 
 export const clean = () => {
-  return gulp.src("build").pipe(del({ force: true }));
+  return gulp.src("docs").pipe(del({ force: true }));
 };
 
 const scripts = () => {
   return gulp
     .src("source/js/**/*.js")
     .pipe(terser())
-    .pipe(gulp.dest("build/js"))
+    .pipe(gulp.dest("docs/js"))
     .pipe(browser.stream());
 };
 
@@ -36,7 +36,7 @@ export const optimizeImg = () => {
         imageminOptipng({ optimizationLevel: 5 }),
       ])
     )
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("docs/img"));
 };
 
 export const flagSprite = () => {
@@ -44,25 +44,25 @@ export const flagSprite = () => {
     .src("source/img/flags/*.svg")
     .pipe(svgstore())
     .pipe(rename("flagSprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("docs/img"));
 };
 
 const copyImg = () => {
-  return gulp.src("source/img/**/*.*").pipe(gulp.dest("build/img"));
+  return gulp.src("source/img/**/*.*").pipe(gulp.dest("docs/img"));
 };
 
 const makeWebp = () => {
   return gulp
     .src("source/img/**/*.{jpg,png}")
     //.pipe(webp({ quality: 90 }))   // если надо будет все переделать в webp, то раскомментируй
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("docs/img"));
 };
 
 export const html = () => {
   return gulp
     .src("source/**/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"));
 };
 
 export const styles = () => {
@@ -73,7 +73,7 @@ export const styles = () => {
     .pipe(sass().on("error", sass.logError))
     .pipe(sourcemaps.write())
     .pipe(postcss([autoprefixer()]))
-    .pipe(gulp.dest("build/css", { sourcemaps: "." }))
+    .pipe(gulp.dest("docs/css", { sourcemaps: "." }))
     .pipe(browser.stream());
 };
 
@@ -82,7 +82,7 @@ export const styles = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: "build",
+      baseDir: "docs",
     },
     cors: true,
     notify: false,
@@ -105,7 +105,7 @@ export const copy = () => {
     .src(["source/fonts/*", "source/*.ico", "source/img/**/.svg"], {
       base: "source",
     })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("docs"));
 };
 
 export default gulp.series(
